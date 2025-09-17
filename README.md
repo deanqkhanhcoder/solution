@@ -1,48 +1,65 @@
-# 🚀 My CSES Problem Set Solutions 🚀
-
-Welcome to my personal collection of solutions for the [CSES Problem Set](https://cses.fi/problemset/)! This repository is a log of my journey through these challenging competitive programming problems, implemented primarily in C++.
-
-## ✨ About This Repository
-
-This project serves as a personal portfolio and a learning journal. Here you'll find my approaches to a wide range of problems, from introductory to advanced. My goal is to create clean, efficient, and well-documented solutions.
-
----
-
-## 💻 Tech Stack
-
-*   **Language:** C++
-*   **Compiler:** g++
-*   **IDE:** Visual Studio Code
+<div align="center">
+  <h1><strong>HÀNH TRÌNH CHINH PHỤC CSES</strong></h1>
+  <p><strong>Chào mừng bạn đến với kho lưu trữ các lời giải cho bộ bài tập CSES (CSES Problem Set)!</strong></p>
+  
+  <p>
+    <a href="https://github.com/deanqkhanhcoder/solution/stargazers"><img src="https://img.shields.io/github/stars/deanqkhanhcoder/solution?style=for-the-badge&logo=github&color=gold" alt="Stars"></a>
+    <a href="https://github.com/deanqkhanhcoder/solution/network/members"><img src="https://img.shields.io/github/forks/deanqkhanhcoder/solution?style=for-the-badge&logo=github&color=lightgrey" alt="Forks"></a>
+    <img src="https://img.shields.io/github/languages/top/deanqkhanhcoder/solution?style=for-the-badge&logo=c%2B%2B&color=blue" alt="Language">
+  </p>
+</div>
 
 ---
 
-## 📂 Repository Structure
+## 👨‍💻 Về Tôi & Dự Án
 
-The solutions are named according to the problem titles on the CSES website. For example, the solution for the "Distinct Numbers" problem will be in a file named `Distinct_Numbers.cpp`.
-
----
-
-## 🎯 My Progress
-
-*   **Introductory Problems:** 🚧 In Progress
-*   **Sorting and Searching:** 🚧 In Progress
-*   **Dynamic Programming:** 🚧 In Progress
-*   **Graph Algorithms:** 🚧 In Progress
-*   **Range Queries:** 🚧 In Progress
-*   **Tree Algorithms:** 🚧 In Progress
-*   **Mathematics:** 🚧 In Progress
-*   **String Algorithms:** 🚧 In Progress
-*   **Geometry:** 🚧 In Progress
-*   **Advanced Techniques:** 🚧 In Progress
+<p>Xin chào, tôi là một người đam mê lập trình thi đấu và giải quyết vấn đề.</p>
+<p>Kho lưu trữ này là nhật ký ghi lại hành trình của tôi với <a href="https://cses.fi/problemset/">CSES Problem Set</a> - một trong những bộ bài tập kinh điển để rèn luyện kỹ năng thuật toán. Mục tiêu của tôi là hoàn thành tất cả các bài toán với lời giải sạch, hiệu quả và dễ hiểu.</p>
+<p>Mỗi lời giải đều là tâm huyết và sự cố gắng của tôi. Hy vọng nó sẽ hữu ích cho những ai đang trên con đường chinh phục CSES giống như mình!</p>
 
 ---
 
-## 🤝 Contributing
+## 🛠️ Công Cụ Sử Dụng
 
-While this is a personal project, I'm open to suggestions and discussions. If you have a more optimal solution or find a bug in my code, feel free to open an issue or a pull request!
+<div align="center">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+  <img src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code">
+  <img src="https://img.shields.io/badge/g++-4E8DB6?style=for-the-badge&logo=gnu&logoColor=white" alt="g++">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+</div>
 
 ---
 
-> "The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie
+## 📈 Tiến Độ Của Tôi
 
-Happy coding! 🎉
+| Chuyên đề                 | Trạng thái        | Tiến độ (ước tính)                               |
+| ------------------------- | ----------------- | ------------------------------------------------- |
+| **Introductory Problems** | ⏳ Đang thực hiện | ⚫⚫⚫⚫⚫⚪⚪⚪⚪⚪ (50%)                               |
+| **Sorting and Searching** | ⏳ Đang thực hiện | ⚫⚫⚫⚪⚪⚪⚪⚪⚪⚪ (30%)                               |
+| **Dynamic Programming**   | ⏳ Đang thực hiện | ⚫⚫⚪⚪⚪⚪⚪⚪⚪⚪ (20%)                               |
+| **Graph Algorithms**      | ⏳ Đang thực hiện | ⚫⚪⚪⚪⚪⚪⚪⚪⚪⚪ (10%)                               |
+| **Range Queries**         | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
+| **Tree Algorithms**       | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
+| **Mathematics**           | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
+| **String Algorithms**     | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
+| **Geometry**              | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
+| **Advanced Techniques**   | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
+
+---
+
+## 🗂️ Cấu Trúc Thư Mục
+
+Các tệp lời giải được đặt tên theo tiêu đề của bài toán trên trang web CSES.
+Ví dụ: Lời giải cho bài toán `Distinct Numbers` sẽ được lưu trong tệp `Distinct_Numbers.cpp`.
+
+---
+
+## 💬 Liên Hệ & Đóng Góp
+
+Mọi ý kiến đóng góp và thảo luận đều được chào đón. Nếu bạn có một giải pháp tối ưu hơn hoặc tìm thấy lỗi trong mã của tôi, đừng ngần ngại tạo một `Issue` hoặc `Pull Request` nhé!
+
+<div align="center">
+  <p><strong>"Code không chỉ chạy, mà còn phải đẹp."</strong></p>
+  <p>---</p>
+  <p>Cảm ơn bạn đã ghé thăm! Chúc bạn có những giờ phút code vui vẻ! 💻</p>
+</div>
