@@ -34,9 +34,9 @@
 
 | Chuyên đề                 | Trạng thái        | Tiến độ (ước tính)                               |
 | ------------------------- | ----------------- | ------------------------------------------------- |
-| **Introductory Problems** | ⏳ Đang thực hiện | ⚫⚫⚫⚫⚫⚪⚪⚪⚪⚪ (50%)                               |
-| **Sorting and Searching** | ⏳ Đang thực hiện | ⚫⚫⚫⚪⚪⚪⚪⚪⚪⚪ (30%)                               |
-| **Dynamic Programming**   | ⏳ Đang thực hiện | ⚫⚫⚪⚪⚪⚪⚪⚪⚪⚪ (20%)                               |
+| **Introductory Problems** | ✅ Hoàn thành     | ⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫ (100%)                              |
+| **Sorting and Searching** | ⏳ Đang thực hiện | ⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫ (99%)                               |
+| **Dynamic Programming**   | ⏳ Đang thực hiện | ⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫ (95%)                               |
 | **Graph Algorithms**      | ⏳ Đang thực hiện | ⚫⚪⚪⚪⚪⚪⚪⚪⚪⚪ (10%)                               |
 | **Range Queries**         | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
 | **Tree Algorithms**       | ⛔ Chưa bắt đầu    | ⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪ (0%)                                 |
