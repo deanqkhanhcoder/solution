@@ -1,0 +1,1 @@
+{"name":"Local: xoanocso","url":"d:\\cppvscode\\xoanocso.cpp","tests":[{"id":1754555500177,"input":"3\n2 3\n1 1\n4 2","output":"8\n1\n15"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\xoanocso.cpp","group":"local","local":true}

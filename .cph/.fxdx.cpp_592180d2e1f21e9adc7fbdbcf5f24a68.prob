@@ -1,0 +1,1 @@
+{"name":"Local: fxdx","url":"d:\\cppvscode\\fxdx.cpp","tests":[{"id":1757768772210,"input":"3 4\nabcb\na 1000 1100\nb 350 700\nc 200 800\n","output":"900"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\fxdx.cpp","group":"local","local":true}

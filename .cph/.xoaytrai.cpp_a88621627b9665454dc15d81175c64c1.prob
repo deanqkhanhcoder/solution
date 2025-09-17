@@ -1,0 +1,1 @@
+{"name":"Local: xoaytrai","url":"d:\\cppvscode\\xoaytrai.cpp","tests":[{"id":1754317438771,"input":"8 6\n16 66 96 73 11 13 99 82","output":"99 82 16 66 96 73 11 13"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\xoaytrai.cpp","group":"local","local":true}

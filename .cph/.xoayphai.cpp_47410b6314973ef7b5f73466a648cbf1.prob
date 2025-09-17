@@ -1,0 +1,1 @@
+{"name":"Local: xoayphai","url":"d:\\cppvscode\\xoayphai.cpp","tests":[{"id":1754318967098,"input":"9 3\n69 3 92 57 52 67 30 42 90","output":"30 42 90 69 3 92 57 52 67"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\xoayphai.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: sort","url":"d:\\cppvscode\\sort.cpp","tests":[{"id":1754487933306,"input":"8\n992 763 670 344 67 268 298 852","output":"67 268 298 344 670 763 852 992 \n992 852 763 670 344 298 268 67 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\sort.cpp","group":"local","local":true}

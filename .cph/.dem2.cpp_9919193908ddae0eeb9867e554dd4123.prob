@@ -1,0 +1,1 @@
+{"name":"Local: dem2","url":"d:\\cppvscode\\dem2.cpp","tests":[{"id":1754534447931,"input":"11\ne g e h j e c g g g d","output":"6\ne 3\ng 4\nh 1\nj 1\nc 1\nd 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\dem2.cpp","group":"local","local":true}
