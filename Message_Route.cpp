@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <algorithm>
 using namespace std;
 
 int main(){
@@ -36,11 +37,12 @@ int main(){
         return 0;
     }
     cout << ans[n] + 1 << "\n";
-    string s = to_string(n);
-    while (n > 1){
-        s = to_string(parent[n]) + " " + s;
-        n = parent[n];
+    vector<int> res;
+    for (int cur = n; cur != -1; cur = parent[cur])
+        res.push_back(cur);
+    reverse(res.begin(), res.end());
+    for (int i = 0; i < (int)res.size(); i++){
+        cout << res[i] << ' ';
     }
-    cout << s;
     return 0;
 }
