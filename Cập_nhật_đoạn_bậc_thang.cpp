@@ -10,7 +10,7 @@ int main() {
     cin.tie(nullptr);
     int n, q; cin >> n >> q;
     vector<ll> d(n + 2, 0);
-    vector<int> g(n + 2, 0);
+    vector<ll> g(n + 2, 0);
     while (q--) {
         int l, r;
         cin >> l >> r;
