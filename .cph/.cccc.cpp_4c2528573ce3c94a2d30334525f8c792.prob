@@ -1,0 +1,1 @@
+{"name":"Local: cccc","url":"d:\\cppvscode\\cccc.cpp","tests":[{"id":1758605395778,"input":"5 10 3 1\n6 1 1 5 5","output":"11"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\cccc.cpp","group":"local","local":true}
