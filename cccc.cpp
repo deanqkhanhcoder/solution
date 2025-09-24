@@ -1,36 +1,38 @@
-#include <bits/stdc++.h>
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("inline")
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
+using ll = long long;
 
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int n;
-    long long t, a, b;
+    int n; int t, a, b;
     cin >> n >> t >> a >> b;
-    
-    vector<long long> k(n);
+    vector<int> k(n);
     for (int i = 0; i < n; i++) {
         cin >> k[i];
     }
-    
+    int nlast = k[n - 1];
     sort(k.rbegin(), k.rend());
-    
-    vector<long long> prefix(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        prefix[i] = prefix[i - 1] + k[i - 1];
-    }
-    
-    int best = 0;
-    for (int x = 0; x <= n; x++) {
-        if (n * b + x * (a - b) <= t) {
-            best = x;
+    ll res = 0;
+    for (int i = 0; i < n; ++i) {
+        if (t - a >= (n - i - 1)*b ) {
+            res += k[i];
+            t -= a;
         } else {
-            break;
+            if (k[i] == nlast){
+                nlast = -1;
+            } else
+             {
+                t -= b;
+            }
         }
     }
-    
-    cout << prefix[best] << "\n";
-    
+    cout << res;
     return 0;
 }
