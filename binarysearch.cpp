@@ -3,7 +3,8 @@
 using namespace std;
 void FastIO(){
     ios::sync_with_stdio(false);
-    cin.tie(nullptr); cout.tie(nullptr);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 }
 int main(){
     FastIO();
