@@ -1,0 +1,1 @@
+{"name":"Local: Grid_Paths_I","url":"d:\\solution\\solution\\Grid_Paths_I.cpp","tests":[{"id":1759038623010,"input":"4\n....\n.*..\n...*\n*...","output":"3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\solution\\solution\\Grid_Paths_I.cpp","group":"local","local":true}
