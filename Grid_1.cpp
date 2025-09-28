@@ -7,19 +7,18 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n; cin >> n;
+    int n, m; cin >> n >> m;
     string grid[n];
     for (int i = 0; i < n; i++) cin >> grid[i];
-    int dp[n] = {0};
-    if (grid[0][0] == '.'){
-        dp[0] = 1;
-    } else {
+    int dp[m] = {0};
+    if (grid[n - 1][m - 1] == '#'){
         cout << 0;
         return 0;
     }
+    dp[0] = 1;
     for (int i = 0; i < n; ++i){
-        for (int j = 0; j < n; ++j){
-            if (grid[i][j] == '*'){
+        for (int j = 0; j < m; ++j){
+            if (grid[i][j] == '#'){
                 dp[j] = 0;
             } else {
                 if (i == 0 && j == 0) continue;
@@ -27,5 +26,6 @@ int main() {
             }
         }
     }
-    cout << dp[n - 1];
+    cout << dp[m - 1];
+    return 0;
 }
