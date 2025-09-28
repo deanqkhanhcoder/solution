@@ -3,19 +3,34 @@
 #pragma GCC optimize("inline")
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <climits>
 using namespace std;
 using ll = long long;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int n, w; cin >> n >> w;
-    vector<ll> dp(w + 1);
-    for (int i = 1; i <= n; ++i){
-        int c, cap; cin >> c >> cap;
-        for (int j = w; j >= c; --j){
-            dp[j] = max(dp[j], dp[j - c] + cap);
+    vector<pair<int, int>> a(n);
+    int sum = 0;
+    for (auto &e : a){
+        cin >> e.first >> e.second;
+        sum += e.second;
+    }
+    vector<ll> dp(sum + 1, LLONG_MAX);
+    dp[0] = 0;
+    for (int i = 0; i < n ; ++i){
+        for (int j = sum; j >= a[i].second; --j) {
+            if (dp[j - a[i].second] != LLONG_MAX) {
+                dp[j] = min(dp[j], dp[j - a[i].second] + a[i].first);
+            }
         }
     }
-    cout << dp[w];
+    int ans = 0;
+    for (int i = 0; i <= sum; ++i) {
+        if (dp[i] <= w) ans = i;
+    }
+
+    cout << ans;
     return 0;
 }
