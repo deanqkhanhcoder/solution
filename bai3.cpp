@@ -38,7 +38,6 @@ int main() {
     for (int t = 1; t <= m; ++t) {
         if (!mix[t].empty()) t2 += sum(mix[t]);
     }
-
     cout << (t1 - t2) << '\n';
     return 0;
 }
