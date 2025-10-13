@@ -25,7 +25,8 @@ int main(){
     int maxr = 0;
     for (auto &p : a) {
         int r = p.first.second;
-        int idx = p.second;
+        int idx = p.
+        second;
         if (r <= maxr) cd[p.second] = 1;
         else maxr = r;
     }
