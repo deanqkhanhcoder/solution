@@ -35,7 +35,6 @@ int main(){
         if (r >= minr) c[a[i].second] = 1;
         else minr = r;
     }
- 
     for (int i = 0; i < n; i++) {
         cout << c[i] << " ";
     }
