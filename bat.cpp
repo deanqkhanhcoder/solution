@@ -16,7 +16,6 @@ int main(){
     char c = '.';
     int d = 0;
     a.reserve(n / 2);
-
     for (int i = 0; i < n; ++i){
         if (isdigit(s[i])){
             d = d * 10 + (s[i] - '0');
