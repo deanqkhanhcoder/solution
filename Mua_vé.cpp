@@ -17,16 +17,13 @@ int main() {
         cout << t[1];
         return 0;
     }
-
     int dp1 = t[1];
     int dp2 = min(t[1] + t[2], r[2]);
-
     for (int i = 3; i <= n; ++i) {
         int cur = min(dp2 + t[i], dp1 + r[i]);
         dp1 = dp2;
         dp2 = cur;
     }
-
     cout << dp2;
     return 0;
 }
