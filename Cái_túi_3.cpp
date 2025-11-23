@@ -24,7 +24,6 @@ int main() {
             base <<= 1;
         }
     }
-
     vector<int> dp(s + 1, 0);
     n = (int)w.size();
     for (int i = 0; i < n; i++) {
@@ -32,6 +31,5 @@ int main() {
             dp[j] = max(dp[j], dp[j - w[i]] + v[i]);
         }
     }
-
     cout << dp[s];
 }

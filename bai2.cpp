@@ -2,7 +2,7 @@
 using namespace std;
 
 long long gcd3(long long a, long long b, long long c) {
-    return std::gcd(a, std::gcd(b, c));
+    return gcd(a, gcd(b, c));
 }
 
 int main() {
@@ -11,37 +11,30 @@ int main() {
 
     long long N;
     int P;
-    if (!(cin >> N >> P)) return 0;
+    cin >> N >> P;
+
     long long A, B;
     int R;
     cin >> A >> B >> R;
 
-    int N0 = (int)(N % P);
+    int N0 = N % P;
     A %= P;
     B %= P;
-    int C = (int)((A + B) % P);
+    int C = (A + B) % P;
 
-    // (tuỳ chọn) kiểm tra điều kiện cần bằng gcd
+    // điều kiện cần: (R - N0) mod gcd(P,A,B) == 0
     long long g = gcd3(P, A, B);
-    if (( (R - N0) % g + g ) % g != 0) {
+    if (((R - N0) % g + g) % g != 0) {
         cout << -1;
         return 0;
     }
 
-    const int INF = -1;
-    vector<int> dist(P, INF);
+    vector<int> dist(P, -1);
     queue<int> q;
 
-    auto try_push = [&](int x, int d) {
-        if (dist[x] == INF) {
-            dist[x] = d;
-            q.push(x);
-        }
-    };
-
-    // Khởi tạo sau bước đầu tiên (1 thao tác)
-    int s1 = (N0 + (int)A) % P;
-    int s2 = (N0 + (int)B) % P;
+    // 3 trạng thái sau 1 bước đầu tiên
+    int s1 = (N0 + A) % P;
+    int s2 = (N0 + B) % P;
     int s3 = (N0 + C) % P;
 
     if (s1 == R || s2 == R || s3 == R) {
@@ -49,26 +42,26 @@ int main() {
         return 0;
     }
 
-    try_push(s1, 1);
-    try_push(s2, 1);
-    try_push(s3, 1);
+    dist[s1] = dist[s2] = dist[s3] = 1;
+    q.push(s1);
+    q.push(s2);
+    q.push(s3);
 
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        if (u == R) break;
 
-        int v1 = (u + (int)A) % P;
-        int v2 = (u + (int)B) % P;
-        int v3 = (u + C) % P;
+        int v[3] = { (u + A) % P, (u + B) % P, (u + C) % P };
 
-        if (v1 == R || v2 == R || v3 == R) {
-            cout << dist[u] + 1;
-            return 0;
+        for (int nx : v) {
+            if (nx == R) {
+                cout << dist[u] + 1;
+                return 0;
+            }
+            if (dist[nx] == -1) {
+                dist[nx] = dist[u] + 1;
+                q.push(nx);
+            }
         }
-
-        try_push(v1, dist[u] + 1);
-        try_push(v2, dist[u] + 1);
-        try_push(v3, dist[u] + 1);
     }
 
     cout << dist[R];
