@@ -1,29 +1,34 @@
-#pragma GCC optimize("Ofast")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC optimize("inline")
-#include <iostream>
+#pragma GCC optimize("Ofast") 
+#pragma GCC optimize("unroll-loops") 
+#pragma GCC optimize("inline") 
+#include <iostream> 
 #include <vector>
-#include <cstring>
+#include <string>
 using namespace std;
 using ll = long long;
-const int MOD = 1e9 + 7;
+constexpr int MOD = (int)1e9 + 7;
 
-int main() {
-    string s;
-    cin >> s;
-    int n = s.size();
-    vector<ll> prev(n + 1, 0), curr(n + 1, 0);
-    prev[0] = 1;
-    for (char c : s) {
-        memset(curr.data(), 0, (n + 1) * sizeof(ll));
-        for (int j = 0; j <= n; j++) {
-            if ((c == '(' || c == '?') && j != 0)
-                curr[j] = (curr[j] + prev[j - 1]) % MOD;
-            if ((c == ')' || c == '?') && j + 1 <= n)
-                curr[j] = (curr[j] + prev[j + 1]) % MOD;
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    string s; cin >> s;
+    int n = (int)s.size();
+    vector<int> dp1(n + 1, 0);
+    vector<int> dp2(n + 1, 0);
+    dp1[0] = 1;
+    for (int i = 1; i <= n; ++i){
+        char cur = s[i - 1];
+        fill(dp2.begin(), dp2.end(), 0);
+        for (int j = 0; j <= n; ++j){
+            if (cur == '(' || cur == '?'){
+                if (j > 0) dp2[j] = ((ll)dp2[j] + dp1[j - 1]) % MOD;
+            }
+            if (cur == ')' || cur == '?'){
+                if (j + 1 <= n) dp2[j] = ((ll)dp2[j] + dp1[j + 1]) % MOD;
+            }
         }
-        swap(prev, curr);
+        dp1 = dp2;
     }
-
-    cout << prev[0] % MOD;
+    cout << dp1[0];
+    return 0;
 }

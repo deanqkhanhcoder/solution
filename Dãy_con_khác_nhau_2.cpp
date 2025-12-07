@@ -3,17 +3,18 @@
 #pragma GCC optimize("inline")
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
-
 using ll = long long;
 constexpr int MOD = 123456789;
 
-inline int addmod(int a, int b){
+int addmod(int a, int b) {
     a += b;
     if (a >= MOD) a -= MOD;
     return a;
 }
-inline int submod(int a, int b){
+
+int submod(int a, int b) {
     a -= b;
     if (a < 0) a += MOD;
     return a;
@@ -23,27 +24,30 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int n, k; cin >> n >> k;
-    if (k > n){
-        cout << 0;
+    vector<int> a(n);
+    if (k == 1){
+        sort(a.begin(), a.end());
+        a.erase(unique(a.begin(), a.end()), a.end());
+        cout << a.size();
         return 0;
     }
-    vector<int> a(n);
-    for (int &x : a) cin >> x;
-    vector<int> dp(k + 1, 0);
-    dp[0] = 1;
-
-    static int endv[2001][2001] = {0};
-
-    for (int i = 0; i < n; i++){
-        int v = a[i];
-        vector<int> pre = dp;
-        for (int len = k; len >= 1; len--){
-            int ca = pre[len - 1];
-            int rem = endv[v][len];
-            int ans = submod(ca, rem);
-            endv[v][len] = addmod(endv[v][len], ans);
-            dp[len] = addmod(dp[len], ans);
+    for (int &e : a) cin >> e;
+    vector<vector<int>> dp(n, vector<int>(k, 0));
+    vector<vector<int>> last(2001, vector<int>(k, 0));
+    for (int i = 0; i < n; ++i) dp[i][1] = 1;
+    for (int j = 2; j <= k; ++j){
+        int pre = 0;
+        for (int i = 0; i < n; ++i){
+            int v = a[i];
+            dp[i][j] = pre;
+            dp[i][j] = submod(dp[i][j], last[v][j]);
+            last[v][j] = addmod(last[v][j], dp[i][j]);
+            pre = addmod(pre, dp[i][j - 1]);
         }
     }
-    cout << dp[k] % MOD;
+    int ans = 0;
+    for (int i = 0; i < n; i++)
+        ans = addmod(ans, dp[i][k]);
+    cout << ans;
+    return 0;
 }
