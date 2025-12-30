@@ -1,0 +1,1 @@
+{"name":"Local: Tổng và Tích","url":"d:\\cppvscode\\Tổng và Tích.cpp","tests":[{"id":1765779248156,"input":"3\n1 3 2\n1\n3 2","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cppvscode\\Tổng và Tích.cpp","group":"local","local":true}
