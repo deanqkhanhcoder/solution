@@ -10,7 +10,6 @@ const int MOD = 1e9 + 7;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
     int n;
     cin >> n;
     vector<vector<int>> a(n, vector<int>(n));
@@ -23,7 +22,6 @@ int main() {
         int k = __builtin_popcount(mask);
         for(int j = 0; j < n; j++) {
             if(!(mask & (1 << j)) && a[k][j] == 1) {
-
                 dp[mask | (1 << j)] = (dp[mask | (1 << j)] + dp[mask]) % MOD;
             }
         }
