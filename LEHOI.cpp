@@ -1,4 +1,3 @@
-#pragma GCC optimize("Ofast")
 #pragma GCC optimize("inline")
 #pragma GCC optimize("unroll-loops")
 #include <iostream>
