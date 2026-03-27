@@ -38,28 +38,6 @@ int main(){
             ans += maxest - a[i];
         }
     } else {
-        // auto calc = [&](int mid) {
-        //     ll res = 0;
-        //     int i = 0;
-        //     for (; i < n; ++i) {
-        //         if (a[i] > mid) break;
-        //         res += mid - a[i];
-        //     }
-        //     for (; i < n; ++i) {
-        //         res += maxest - a[i];
-        //     }
-        //     return res;
-        // };
-        // vector<int> b = a;
-        // sort(all(b));
-        // if (n & 1){
-        //     ans = calc(b[n / 2]);
-        // } else {
-        //     int mid1 = b[n / 2 - 1];
-        //     int mid2 = b[n / 2];
-        //     ans = calc(mid1);
-        //     ans = min(ans, calc(mid2));
-        // }
         ans = (ll)maxest * n;
         vector<int> prmax(n + 1, 0);
         vector<int> sufmax(n + 2, 0);
