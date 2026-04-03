@@ -3,6 +3,9 @@
 #pragma GCC optimize("inline")
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#define endl '\n'
+#define all(x) x.begin(), x.end()
 using namespace std;
 using ll = long long;
 
