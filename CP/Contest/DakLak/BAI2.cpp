@@ -12,18 +12,18 @@ using ll = long long;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    // freopen("TASK.inp", "r", stdin);
-    // freopen("TASK.out", "w", stdout);
+    freopen("BAI2.INP", "r", stdin);
+    freopen("BAI2.OUT", "w", stdout);
     string s; cin >> s;
     int n = (int)s.size();
     vector<int> pr = {2, 3, 5, 7};
     for (int i = 0; i < n; ++i){
-        for (int p : pr){
-            if (p == s[i] - '0'){
-                cout << p << ' ';
+        for (int j = 0; j < (int)pr.size(); ++j){
+            if (pr[j] == s[i] - '0'){
+                cout << pr[j] << ' ';
+                pr.erase(pr.begin() + j);
+                break;
             }
-            pr.erase(remove(all(pr), p), pr.end());
-            break;
         }
         if (pr.empty()) break;
     }

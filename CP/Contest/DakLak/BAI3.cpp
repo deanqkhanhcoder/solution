@@ -12,6 +12,8 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+    freopen("BAI3.INP", "r", stdin);
+    freopen("BAI3.OUT", "w", stdout);
     int T;
     cin >> T;
     while (T--) {

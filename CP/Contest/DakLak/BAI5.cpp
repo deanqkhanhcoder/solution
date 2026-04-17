@@ -67,8 +67,8 @@ void solve() {
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    // freopen("BAI5.INP", "r", stdin);
-    // freopen("BAI5.OUT", "w", stdout);
+    freopen("BAI5.INP", "r", stdin);
+    freopen("BAI5.OUT", "w", stdout);
     solve();
     return 0;
 }

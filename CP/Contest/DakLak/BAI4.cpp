@@ -12,8 +12,8 @@ using ll = long long;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    // freopen("TASK.inp", "r", stdin);
-    // freopen("TASK.out", "w", stdout);
+    freopen("BAI4.INP", "r", stdin);
+    freopen("BAI4.OUT", "w", stdout);
     int n; cin >> n;
     vector<ll> pref(n + 1);
     pref[0] = 0;
@@ -26,7 +26,7 @@ int main(){
     };
     vector<ll> dp(n + 1, 0);
     for (int i = n; i >= 1; --i){
-        dp[i] = dp[i - 1];
+        if (i != n) dp[i] = dp[i + 1];
         for (int x = 1; x <= 3; ++x){
             int end = min(i + x - 1, n); 
             ll ut = sum(i, end);
