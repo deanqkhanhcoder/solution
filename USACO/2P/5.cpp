@@ -19,27 +19,21 @@ int main(){
     vector<int> a(n);
     for (int &e : a) cin >> e;
     sort(all(a));
-    vector<int> ans(n);
-    int l = 0;
-    for (int r = 0; r < n; ++r){
-        while(l < r && a[r] - a[l] > k) l++;
-        ans[r] = r - l + 1;
-    }
-    int max1 = 0;
-    int max2 = 0;
+    vector<int> len(n);
     for (int i = 0; i < n; ++i){
-        if (ans[i] > max1){
-            max2 = max1;
-            max1 = ans[i];
-        } else if (ans[i] > max2){
-            max2 = ans[i];
-        }
+        int idx = upper_bound(all(a), a[i] + k) - a.begin() - i;
+        len[i] = idx;
     }
-    cout << max1 + max2 << endl;
-    // vector<int> max_suff(n);
-    // max_suff[n - 1] = ans[n - 1];
-    // for (int i = n - 2; i >= 0; i--){
-    //     max_suff[i] = max(max_suff[i + 1], ans[i]);
-    // }
+    vector<int> max_suff(n);
+    max_suff[n - 1] = len[n - 1];
+    for (int i = n - 2; i >= 0; --i){
+        max_suff[i] = max(max_suff[i + 1], len[i]);
+    }
+    int ans = 0;
+    for (int i = 0; i < n; ++i){
+        int val = ((i + len[i] == n) ? 0 : max_suff[i + len[i]]);
+        ans = max(ans, len[i] + val);
+    }
+    cout << ans;
     return 0;
 }
