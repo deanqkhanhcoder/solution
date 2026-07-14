@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <queue>
 #define endl '\n'
 #define sz(x) (int)x.size()
 #define all(x) x.begin(), x.end()
@@ -17,5 +18,23 @@ int main(){
     // #define TASK "haybales"
     // freopen(TASK".in", "r", stdin);
     // freopen(TASK".out", "w", stdout);
-    // code here
+    int n; cin >> n;
+    vector<int> a(n);
+    for (int &e : a) cin >> e;
+    int half = n / 2;
+    priority_queue<int, vector<int>, greater<int>> pq;
+    for (int i = 0; i < half; ++i){
+        int curr = i * 2;
+        int next = curr + 1;
+        pq.push(a[curr]);
+        pq.push(a[next]);
+        pq.pop();
+    }
+    ll ans = 0;
+    while (!pq.empty()){
+        ans += pq.top();
+        pq.pop();
+    }
+    cout << ans << endl;
+    return 0;
 }

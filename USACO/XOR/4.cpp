@@ -18,4 +18,17 @@ int main(){
     // freopen(TASK".in", "r", stdin);
     // freopen(TASK".out", "w", stdout);
     // code here
+    string s; cin >> s;
+    const int LIMIT = 1 << 10;
+    vector<int> cnt(LIMIT, 0);
+    int state = 0;
+    cnt[state] = 1;
+    ll ans = 0;
+    for (char d : s){
+        state ^= 1 << (d - '0');
+        ans += cnt[state];
+        cnt[state]++;
+    }
+    cout << ans << endl;
+    return 0;
 }

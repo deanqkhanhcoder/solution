@@ -57,7 +57,7 @@ int main(){
         }
         if (diff.count(curr_diff)){
             res += diff[curr_diff];
-            if (res >= MOD) res -= MOD;
+            if (res >= MOD) res +-= MOD;
         }
         diff[curr_diff]++;
     }

@@ -17,5 +17,15 @@ int main(){
     // #define TASK "haybales"
     // freopen(TASK".in", "r", stdin);
     // freopen(TASK".out", "w", stdout);
-    // code here
+    int x, n; cin >> x >> n;
+    vector<int> a(n);
+    for (int &e : a) cin >> e;
+    sort(all(a));
+    int ans = 0;
+    for (int i = n - 1; i >= 1; --i){
+        ans += x;
+        x -= a[i];
+    }
+    cout << ans << endl;
+    return 0;
 }

@@ -17,5 +17,10 @@ int main(){
     // #define TASK "haybales"
     // freopen(TASK".in", "r", stdin);
     // freopen(TASK".out", "w", stdout);
-    // code here
+    int m, n, p, q; cin >> m >> n >> p >> q;
+    int dist_x = p - m;
+    int dist_y = q - n;
+    int g = __gcd(abs(dist_x), abs(dist_y));
+    cout << g - 1 << endl;
+    return 0;
 }
