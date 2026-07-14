@@ -17,5 +17,7 @@ int main(){
     // #define TASK "haybales"
     // freopen(TASK".in", "r", stdin);
     // freopen(TASK".out", "w", stdout);
-    int n; cin >> n;
+    ll n; cin >> n;
+    ll result = n;
+    for (int i = 0
 }
