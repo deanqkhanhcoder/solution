@@ -17,17 +17,5 @@ int main(){
     // #define TASK "haybales"
     // freopen(TASK".in", "r", stdin);
     // freopen(TASK".out", "w", stdout);
-    ll n; cin >> n;
-    ll result = n;
-    for (ll i = 2; i * i <= n; ++i){
-        if (n % i == 0){
-            while (n % i == 0){
-                n /= i;
-            }
-            result -= (result / i);
-        }
-    }
-    if (n > 1) result -= result / n;
-    cout << result << endl;
-    return 0;
+    
 }
