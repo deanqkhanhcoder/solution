@@ -19,7 +19,7 @@ int main(){
     for (int &e : a) cin >> e;
     sort(all(a));
     int ans = 0;
-    auto started = [&](int index) -> int{
+    auto started = [&](int index) -> int {
         int res = 1;
         int l = index, r = index;
         int boom = 1;
