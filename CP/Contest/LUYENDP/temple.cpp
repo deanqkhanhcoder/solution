@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #define endl '\n'
+#define lowbit(x) ((x) & (-(x)))
 #define all(x) x.begin(), x.end()
 #define sz(x) (int)x.size()
 using namespace std;
