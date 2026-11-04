@@ -40,6 +40,7 @@ struct SegmentTree {
     void pushDown(int id, int l, int m, int r) {
         ll p = tree[id].lazyP;
         ll q = tree[id].lazyQ;
+        if (p == 0 && q == 0) return;
         apply(2 * id, l, m, p, q);
         apply(2 * id + 1, m + 1, r, p, q);
         tree[id].lazyP = 0;
