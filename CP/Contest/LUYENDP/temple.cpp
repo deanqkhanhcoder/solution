@@ -11,6 +11,7 @@
 using namespace std;
 using ll = long long;
 constexpr int INF = (int)1e9;
+constexpr ll INFLL = (ll)1e18;
 constexpr int MOD = (int)1e9 + 7;
 
 int main() {
