@@ -18,16 +18,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     // code here    
-    string s; cin >> s;
+    vector<int> pow10(9);
+    pow10[0] = 1;
+    for (int i = 1; i < 9; ++i){
+        pow10[i] = pow10[i - 1] * 10; 
+    }
+    int n = 0;
     for (int i = 0; i < 9; ++i){
-        char c; cin >> c;
-        s.push_back(c);
+        int x; cin >> x;
+        n += pow10[8 - i] * x;
     }
-    ll n = stoll(s);
+    // cerr << "n : " << n << endl;
+    // auto next = [&](int pos, int val){
 
-    
-    auto next = [&](int pos, int val){
-
-    }
+    // }
     return 0;
 }
